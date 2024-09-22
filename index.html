@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        font-family: verdana, sans-serif;
+    }
+    /* header styling */
+    .navbar{
+        width: 100%;
+        height: 2.5em;
+        background-color: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5em 0em;
+        letter-spacing: .2em;
+        box-shadow: 2px 2px 5px #aaaaaa;
+        position: fixed;
+        z-index: 10px;
+    }
+    header .navbar p{
+        padding-left: 2em;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        padding-right: 1.8em;
+    }
+    .brimg{
+        background-image: url('https://www.w3schools.com/w3images/architect.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 110vh;
+    }
+    /* main part styling */
+    .main p, #about .about, #contact h3 {
+        padding: 2em 0 2em 1em;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .m1, .m2 {
+        display: flex;
+        padding: .5em 1em;
+        gap: 1em;
+    }
+    @media screen and (width < 600px) {
+        .m1, .m2, .a1 {display: flex; flex-direction: column;}
+        .brimg {display: flex; align-items: center; width: auto;}
+        .navbar {width: auto;}
+    }
+    .house1, .house2, .house3, .house4, .house5, .house6, .house7, .house8 {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: 15em;
+    }
+    .main h4 {
+        background-color: black;
+        color: white;
+        height: 2em;
+        width: 8.5em;
+        font-weight: 100;
+        text-align: center;
+        padding-top: .7em;
+    }
+    .a1 {
+        display: flex;
+        gap: 1em;
+        padding: 1em;
+    }
+    .a11 img, .a12 img, .a13 img, .a14 img {
+        width: 100%;
+        filter: grayscale(0.75);
+    }
+    .a11 h2, .a12 h2, .a13 h2, .a14 h2 {
+        font-weight: 100;
+        padding: .5em 0;
+    }
+    .a11 h4, .a12 h4, .a13 h4, .a14 h4 {
+        font-weight: 100;
+        color: grey;
+        padding: .5em 0;
+    }
+    .a11 p, .a12 p, .a13 p, .a14 p {
+        padding: .5em 0;
+    }
+    .a11 button, .a12 button, .a13 button, .a14 button {
+        width: 100%;
+        height: 2.3em;
+        font-size: medium;
+        border: white;
+    }
+    /* contact styling */
+    #contact {
+        padding-bottom: 3em;
+    }
+    #contact form input {
+        width: 90%;
+        padding: 1em;
+        margin: .5em 0 .5em 2em;
+    }
+    #contact button {
+        background-color: black;
+        color: white;
+        width: 10em;
+        height: 2.7em;
+        margin: 1em 0 0 2em;
+    }
+    /* footer styling */
+    footer{
+        height: 10em;
+    }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="navbar">
+            <p><b>BR</b> Architects</p>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <div class="brimg" style="padding-top: 5em;">
+            <h1 style="padding: 10em 15em 10em 20em; font-weight: 200; color: white; letter-spacing: .1em;"><span style="background-color: rgba(0, 0, 0, 0.781); color: white; padding: .4em; font-weight: 800;">BR</span> Architects</h1>
+        </div>
+    </header> 
+    <!-- main section -->
+    <main>
+        <!-- main container in main section -->
+        <div class="main" id="projects">
+            <p>Projects</p>
+            <!-- main 1 -->
+            <div class="m1">
+                <!-- house 1 -->
+                <div class="house1" style="background-image: url('https://www.w3schools.com/w3images/house5.jpg');">
+                    <h4>Summer House</h4>
+                </div>
+                <!-- house 2 -->
+                <div class="house2" style="background-image: url('https://www.w3schools.com/w3images/house2.jpg');">
+                    <h4>Brick House</h4>
+                </div>
+                <!-- house 3 -->
+                <div class="house3" style="background-image: url('https://www.w3schools.com/w3images/house3.jpg');">
+                    <h4>Renovated</h4>
+                </div>
+                <!-- house 4 -->
+                <div class="house4" style="background-image: url('https://www.w3schools.com/w3images/house4.jpg');">
+                    <h4>Bare House</h4>
+                </div>
+            </div>
+            <!-- main 2 -->
+            <div class="m2">
+                <!-- house 5 -->
+                <div class="house5" style="background-image: url('https://www.w3schools.com/w3images/house2.jpg');">
+                    <h4>Summer House</h4>
+                </div>
+                <!-- house 6 -->
+                <div class="house6" style="background-image: url('https://www.w3schools.com/w3images/house5.jpg');">
+                    <h4>Brick House</h4>
+                </div>
+                <!-- house 7 -->
+                <div class="house7" style="background-image: url('https://www.w3schools.com/w3images/house4.jpg');">
+                    <h4>Renovated</h4>
+                </div>
+                <!-- house 8 -->
+                <div class="house8" style="background-image: url('https://www.w3schools.com/w3images/house3.jpg');">
+                    <h4>Bear House</h4>
+                </div>
+            </div>
+        </div>
+        <!-- about container in main section -->
+        <div id="about">
+            <h3 class="about">About</h3>
+            <p style="padding-left: 1.5em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="a1">
+                <div class="a11">
+                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+                    <h2>John Doe</h2>
+                    <h4>CEO & Founder</h4>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button>Contact</button>
+                </div>
+                <div class="a12">
+                    <img src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                    <h2>Jane Doe</h2>
+                    <h4>Architect</h4>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button>Contact</button>
+                </div>
+                <div class="a13">
+                    <img src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                    <h2>Mike Ross</h2>
+                    <h4>Architect</h4>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button>Contact</button>
+                </div>
+                <div class="a14">
+                    <img src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+                    <h2>Dan Star</h2>
+                    <h4>Architect</h4>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button>Contact</button>
+                </div>
+            </div>
+        </div>
+        <!-- contact container in main section -->
+        <div id="contact">
+            <h3>Contact</h3>
+            <p style="padding: 0 1.5em .5em 1.5em;">Lets get in touch and talk about your next project.</p>
+            <form action="">
+                <input class="form1" type="text" placeholder="Name">
+                <input class="form2" type="text" placeholder="Email">
+                <input class="form3" type="text" placeholder="Subject">
+                <input class="form4" type="text" placeholder="Comment">
+            </form>
+            <button>SEND MESSAGE</button>
+        </div>
+        <!-- map -->
+        <div>
+            <img src="https://www.w3schools.com/w3images/map.jpg" style="padding-left: .8em;" alt="">
+        </div>
+        <!-- footer -->
+        <div style="background-color: black; color: white; height: 3.7em; text-align: center; padding-top: 1.9em;">
+            <p>Powered by <u>w3.css</u></p>
+        </div>     
+    </main>
+</body>
+</html>
